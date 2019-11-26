@@ -25,6 +25,7 @@ public class FollowProjectile : MonoBehaviour
         {
             DestroyProjectile();
             spawnTime = startBtwSpawnTime;
+            Debug.Log("Miss Shot Self Destructed");
         }
         else
         {
@@ -37,6 +38,7 @@ public class FollowProjectile : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             DestroyProjectile();
+            Debug.Log("Big Hit!");
         }
     }
 
