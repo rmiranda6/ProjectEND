@@ -37,6 +37,7 @@ public class Projectile : MonoBehaviour
             DestroyProjectile();
             Debug.Log("HIT!");
             health.TakeDamage();
+            //FindObjectOfType<AudioManager>().Play("SoundName"); <- This is what I will type to play the sound that I want.
         }
         if (other.CompareTag("Wall"))
         {
