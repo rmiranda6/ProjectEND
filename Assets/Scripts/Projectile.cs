@@ -7,11 +7,14 @@ public class Projectile : MonoBehaviour
     public float speed;
 
     private Transform player;
+    private Health health;
     private Vector2 target;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        health = GameObject.Find("YellowPlayer").GetComponent<Health>();
 
         target = new Vector2(player.position.x, player.position.y);
     }
@@ -29,10 +32,20 @@ public class Projectile : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             DestroyProjectile();
             Debug.Log("HIT!");
+            health.TakeDamage();
+        }
+        if (other.CompareTag("Wall"))
+        {
+            Debug.Log("Hit WALL");
+            DestroyProjectile();
+        }
+        if (other.CompareTag("Enemy"))
+        {
+            DestroyProjectile();
         }
     }
 

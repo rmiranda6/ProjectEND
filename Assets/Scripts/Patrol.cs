@@ -10,10 +10,13 @@ public class Patrol : MonoBehaviour
 
     public Transform[] moveSpots; // It's an array, so you will need to have multiple GameObjects that you will want the enemy to move to.
     private int randomSpot;
+
+    private Health health;
     void Start()
     {
         waitTime = startWaitTime;
         randomSpot = Random.Range(0, moveSpots.Length);
+        health = GameObject.Find("YellowPlayer").GetComponent<Health>();
     }
 
     void Update()
@@ -40,6 +43,7 @@ public class Patrol : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             Debug.Log("HIT");
+            health.TakeDamage();
         }
     }
 }

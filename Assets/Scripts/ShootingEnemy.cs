@@ -13,10 +13,13 @@ public class ShootingEnemy : MonoBehaviour
 
     public GameObject projectile;
     public Transform player;
+    private Health health;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        health = GameObject.Find("YellowPlayer").GetComponent<Health>();
 
         timeBtwShots = startTimeBtwShots;
     }
@@ -50,5 +53,14 @@ public class ShootingEnemy : MonoBehaviour
             timeBtwShots -= Time.deltaTime;
         }
 
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            Debug.Log("HIT");
+            health.TakeDamage();
+        }
     }
 }

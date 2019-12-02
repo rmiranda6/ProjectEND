@@ -9,10 +9,13 @@ public class FollowProjectile : MonoBehaviour
     public float startBtwSpawnTime;
 
     private Transform player;
+    private Health health;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+
+        health = GameObject.Find("YellowPlayer").GetComponent<Health>();
 
         spawnTime = startBtwSpawnTime;
     }
@@ -39,6 +42,15 @@ public class FollowProjectile : MonoBehaviour
         {
             DestroyProjectile();
             Debug.Log("Big Hit!");
+            health.TakeDamage();
+        }
+        if (other.CompareTag("Wall"))
+        {
+            DestroyProjectile();
+        }
+        if(other.CompareTag("Enemy"))
+        {
+            DestroyProjectile();
         }
     }
 
