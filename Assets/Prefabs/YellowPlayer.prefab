@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 4196579996904152171}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.648169, y: -3.536583, z: 0}
-  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -70,8 +70,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -187937173
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: c37c787d682e56c4fa2684399021e9cb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -96,6 +96,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5ecb89e1a7369345a0537e920682d8a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bloodEffect: {fileID: 5414913804234865418, guid: d42fb327207bb4d4aa4c6b6334e74c31,
+    type: 3}
   speed: 5
 --- !u!114 &4910451423221940064
 MonoBehaviour:
@@ -112,8 +114,10 @@ MonoBehaviour:
   health: 4
   numOfHearts: 4
   hearts: []
-  fullHeart: {fileID: 0}
-  emptyHeart: {fileID: 0}
+  fullHeart: {fileID: -4195582761621981391, guid: d0956c45d78ab9c46bb1ea66d7efd19e,
+    type: 3}
+  emptyHeart: {fileID: 4606908045521496030, guid: d0956c45d78ab9c46bb1ea66d7efd19e,
+    type: 3}
 --- !u!50 &4196579996904152167
 Rigidbody2D:
   serializedVersion: 4
@@ -148,16 +152,16 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0005396679, y: 0}
+  m_Offset: {x: -0.0031938553, y: 0.007962942}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.32, y: 0.32}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.32, y: 0.32}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.30381066, y: 0.32}
+  m_Size: {x: 0.9355607, y: 0.97298574}
   m_EdgeRadius: 0

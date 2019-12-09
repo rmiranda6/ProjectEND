@@ -45,6 +45,8 @@ public class Health : MonoBehaviour
     public void TakeDamage()
     {
         health -= 1;
+        FindObjectOfType<AudioManager>().Play("punch");
+        FindObjectOfType<Player>().Hurt();
     }
 
 }

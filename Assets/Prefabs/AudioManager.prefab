@@ -44,9 +44,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: 
-    clip: {fileID: 0}
-    volume: 0
-    pitch: 0.1
+  - name: Dungeon Music
+    clip: {fileID: 8300000, guid: f49b46340a53045459f346801e6bbedd, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 1
+    source: {fileID: 0}
+  - name: punch
+    clip: {fileID: 8300000, guid: 1344d766575ea1d409b5396ba0137a17, type: 3}
+    volume: 1
+    pitch: 1
     loop: 0
     source: {fileID: 0}
