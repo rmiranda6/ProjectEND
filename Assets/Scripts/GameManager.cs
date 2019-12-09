@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour
     {
         playerHealth = GameObject.Find("YellowPlayer").GetComponent<Health>();
 
-        player = GameObject.Find("Player").GetComponent<Player>();
+        player = GameObject.Find("YellowPlayer").GetComponent<Player>();
 
     }
 
